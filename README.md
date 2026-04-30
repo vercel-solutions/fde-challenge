@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# kw — Vercel Professional Services Challenge
+
+Welcome. This is a minimal storefront our customer recently handed off to the Professional Services team. The codebase is intentionally tiny — focus on the three issues below.
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## What the customer needs
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 1. The page is slow
 
-## Learn More
+Our customer launched this storefront yesterday. Analytics show the product grid takes up to 3 seconds to appear. It's a plain product page so it should feel instant. Find the cause and fix it.
 
-To learn more about Next.js, take a look at the following resources:
+### 2. A/B title experiments
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Marketing wants to A/B test product copy. Each product in `public/data.json` already carries four title variants (`default`, `a`, `b`, `c`). Roll out personalization so each visitor sees one variant consistently on repeat visits — without losing the speed gains from #1.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 3. Try it on with AI
 
-## Deploy on Vercel
+Some shoppers asked to see how our gear looks on them. Add an upload button to the grid. After a shopper uploads a photo (you can use `public/dom.jpeg` for testing), regenerate each product image so it's worn by the uploaded person.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Use AI SDK + Vercel AI Gateway with the `google/gemini-2.5-flash-image-preview` image model. We'll provide an `AI_GATEWAY_API_KEY` at the interview.

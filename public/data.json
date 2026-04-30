@@ -1,0 +1,48 @@
+{
+  "products": [
+    {
+      "id": "hoodie",
+      "title": {
+        "default": "Cotton Hoodie",
+        "a": "The Comfort Hoodie",
+        "b": "Premium Heavyweight Hoodie",
+        "c": "Streetwear Hoodie"
+      },
+      "price": "89",
+      "image": "/hoodie.jpg"
+    },
+    {
+      "id": "cap",
+      "title": {
+        "default": "Logo Cap",
+        "a": "The Daily Cap",
+        "b": "Premium Wool Cap",
+        "c": "Skater Cap"
+      },
+      "price": "35",
+      "image": "/cap.jpg"
+    },
+    {
+      "id": "pants",
+      "title": {
+        "default": "Cotton Pants",
+        "a": "The Easy Pants",
+        "b": "Premium Tailored Trousers",
+        "c": "Cargo Pants"
+      },
+      "price": "75",
+      "image": "/pants.jpg"
+    },
+    {
+      "id": "shoes",
+      "title": {
+        "default": "Canvas Sneakers",
+        "a": "The Daily Sneaker",
+        "b": "Premium Leather Sneakers",
+        "c": "Streetwear Sneakers"
+      },
+      "price": "120",
+      "image": "/shoes.jpg"
+    }
+  ]
+}
