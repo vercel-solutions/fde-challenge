@@ -31,7 +31,7 @@ export default async function Home() {
             <ProductCard
               key={product.id}
               product={product}
-              priority={index === 0}
+              preload={index === 0}
             />
           ))}
         </ul>
@@ -42,10 +42,10 @@ export default async function Home() {
 
 function ProductCard({
   product,
-  priority,
+  preload,
 }: {
   product: Product
-  priority: boolean
+  preload: boolean
 }) {
   const title = product.title.default
 
@@ -53,11 +53,11 @@ function ProductCard({
     <li>
       <div className="relative aspect-square overflow-hidden bg-zinc-100 dark:bg-zinc-900">
         <Image
+          preload={preload}
           src={product.image}
           alt={title}
           width={800}
           height={800}
-          priority={priority}
           sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
           className="h-full w-full object-cover"
         />
@@ -65,7 +65,8 @@ function ProductCard({
       <div className="mt-4 flex items-baseline justify-between gap-4">
         <h3 className="min-w-0 truncate text-sm font-medium">{title}</h3>
         <p className="text-sm tabular-nums text-zinc-600 dark:text-zinc-400">
-          ${product.price}
+          $
+          {product.price}
         </p>
       </div>
     </li>
