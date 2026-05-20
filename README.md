@@ -15,7 +15,7 @@ Open http://localhost:3000.
 
 ### 1. The page is slow
 
-Our customer launched this storefront yesterday. Analytics show the product grid takes up to 3 seconds to appear. It's a plain product page so it should feel instant. Find the cause and fix it.
+Our customer launched this storefront yesterday. Analytics show the product grid takes up to 3 seconds to appear. The customer told us the catalog never changes, so this page should feel instant. Find the cause and fix it.
 
 ### 2. A/B title experiments
 
