@@ -30,10 +30,11 @@ export default async function Home() {
                 />
               </div>
               <div className="mt-4 flex items-baseline justify-between gap-4">
-                <h3 className="min-w-0 truncate text-sm font-medium">{title}</h3>
+                <h3 className="min-w-0 truncate text-sm font-medium">
+                  {title}
+                </h3>
                 <p className="text-sm tabular-nums text-zinc-600 dark:text-zinc-400">
-                  $
-                  {product.price}
+                  ${product.price}
                 </p>
               </div>
             </li>
